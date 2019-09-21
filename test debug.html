@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>TIM KIEM NHI PHAN</title>
+    <script src ="linearSearch.js"></script>
+    <script src="binarySearch.js"></script>
+
+</head>
+<body>
+<script>
+
+
+    // debugger
+    let arr = [1, 2, 3, 5, 19, 7, 20, 31, 11, 10, 8];
+    let index = parseInt(prompt("enter a value of index: "));
+    // let index = 10;
+    arr.sort(function (a, b) {
+        return a - b;
+    })
+
+
+    // document.write(arr);
+    let start1 = parseFloat(performance.now());
+    linearSearch(arr, index);
+    let end1 = parseFloat(performance.now());
+    document.write("Time check linear: " + (end1 - start1) + "ms"+"<br>");
+    let start2=parseFloat(performance.now());
+    binarySearch(arr,index);
+    let end2=parseFloat(performance.now());
+    document.write(("Time check binary: "+(end2-start2)+'ms'));
+
+
+    // function binarysearch(arr,index) {
+    //
+    // }
+
+
+</script>
+
+
+</body>
+</html>
